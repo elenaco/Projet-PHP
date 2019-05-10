@@ -1,12 +1,10 @@
 function verifNom(){
-    var nom=document.getElementById('nom').value.trim();
+    var nom = document.getElementById('nom').value.trim();
 
-    var regex = new RegExp('^[A-Za-z.-]{0,20} +$');
+    var regex = new RegExp('^[A-Za-z.-]{0,20}$');
     var result= regex.test(nom);
-    if (result == true) {
-        alert("cooool");
-    }else{
-        alert("aiaiaiaiaia");
+    if (result == false) {
+        document.getElementById('errorN').innerHTML="Votre nom contient des caractères incorrects.";
     }
 
     return result;
@@ -15,9 +13,12 @@ function verifNom(){
 function verifPrenom(){
     var prenom = document.getElementById('prenom').value.trim();
 
-    var regex = new RegExp('^[A-Za-z.-]{0,20} +$');
+    var regex = new RegExp('^[A-Za-z.-]{0,20}$');
     var result= regex.test(prenom);
 
+    if (result == false) {
+        document.getElementById('errorP').innerHTML="Votre prénom contient des caractères incorrects.";
+    }
 
     return result;
 }
@@ -28,16 +29,22 @@ function verifMail(){
     var regex = new RegExp('^[0-9a-z._-]+@{1}[0-9a-z.-]{2,}[.]{1}[a-z]{2,5}$');
     var result= regex.test(adresse);
 
+    if (result == false) {
+        document.getElementById('errorM').innerHTML="Votre mail n'est pas valide.";
+    }
     return result;
 }
 
-/*function verifAge(){
-    var age = document.getElementById().value.trim();
-    var regex = new RegExp('^[a-zA-Z]+[- ]{0,1}[a-zA-Z]+[- ]{0,1}[a-zA-Z]+[- ]{0,1}[a-zA-Z]+[- ]{0,1}[a-zA-Z]+$');
+function verifAge(){
+    var age = document.getElementById('age').value.trim();
+    var date = new Date();
+    //alert(date.getMilliseconds());
+    alert(age);
+    /*var regex = new RegExp('^[a-zA-Z]+[- ]{0,1}[a-zA-Z]+[- ]{0,1}[a-zA-Z]+[- ]{0,1}[a-zA-Z]+[- ]{0,1}[a-zA-Z]+$');
     var result= regex.test(adresse);
 
-    return result;
-}*/
+    return result;*/
+}
 
 
 function verifInfoUtilisateur() {
@@ -46,7 +53,7 @@ function verifInfoUtilisateur() {
         verifNom();
         verifPrenom();
         verifMail();
-        verifAge();
+        //verifAge();
     }
 
 }

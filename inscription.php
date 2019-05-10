@@ -15,10 +15,12 @@ echo "
 		<div>
 			<label>Nom :</label>
 			<input type='text' name='nom' id='nom' onblur=\"verifNom()\" required=\"required\">
+			<div id='errorN'></div>
 		</div>
 		<div>
 			<label>Prénom :</label>
 			<input type='text' name='prenom' id='prenom' onblur=\"verifPrenom()\" required=\"required\">
+			<div id='errorP'></div>
 		</div>
 		<div>
 			<label>Pseudo :</label>
@@ -27,6 +29,7 @@ echo "
 		<div>
 			<label>Mail :</label>
 			<input type='email' name='mail' id='mail' onblur=\"verifMail()\" required=\"required\">
+			<div id='errorM'></div>
 		</div>
 		<div>
 			<label>Mot de passe :</label>
