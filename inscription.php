@@ -2,23 +2,23 @@
 <html>
 	<head>
 		<title>Inscription</title>
+        <meta charset="utf-8">
 	</head>
 	<body>
-	<?php
-	echo "
+<?php
+echo "
 <h1> Inscription </h1>
  
 <div class=\"form-popup\" id=\"formInscription\">
-
-	<form action='Traitement/gestionInscription.php' method='POST'>
+	<form action='gestionInscription.php' method='POST'>
 	
 		<div>
 			<label>Nom :</label>
-			<input type='text' name='nom' required=\"required\">
+			<input type='text' name='nom' id='nom' onblur=\"verifNom()\" required=\"required\">
 		</div>
 		<div>
 			<label>Prénom :</label>
-			<input type='text' name='prenom' required=\"required\">
+			<input type='text' name='prenom' id='prenom' onblur=\"verifPrenom()\" required=\"required\">
 		</div>
 		<div>
 			<label>Pseudo :</label>
@@ -26,7 +26,7 @@
 		</div>
 		<div>
 			<label>Mail :</label>
-			<input type='email' name='mail' required=\"required\">
+			<input type='email' name='mail' id='mail' onblur=\"verifMail()\" required=\"required\">
 		</div>
 		<div>
 			<label>Mot de passe :</label>
@@ -34,13 +34,18 @@
 		</div>
 		<div>
 			<label>Date de naissance :</label>
-			<input type='date' name='date_naissance' required=\"required\">
+			<input type='date' name='date_naissance' id='age' onblur=\"verifAge()\" required=\"required\">
 		</div>
 		
-	<button type=\"submit\" class=\"btn\">Valider</button>
+	<button type=\"submit\" class=\"btn\" onclick=\"verifInfoUtilisateur()\" >Valider</button>
 	</form>
 	<form action='connexion.php' method='POST'>
 	<button type=\"submit\" class=\"btn\">J'ai déjà un compte</button>
 	</form>
 </div>";
 ?>
+
+<script type ="text/javascript" src="js/restrictionField.js"></script>
+
+    </body>
+</html>

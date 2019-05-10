@@ -1,9 +1,9 @@
 <?php
 include('../Class/user.php');
 
- $user = new user;
+ $user = new User;
 
-$user->setPseudo($_POST['pseudo']);
+ $user->setPseudo($_POST['pseudo']);
  $user->setNom($_POST['nom']);
  $user->setPrenom($_POST['prenom']);
  $user->setMail($_POST['mail']);

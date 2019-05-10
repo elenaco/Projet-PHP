@@ -1,8 +1,13 @@
 <?php
+//a changer
+include('../Class/user.php');
+
 session_start();
 
+//$user = new User();
 // appel à la fonction qui vérifie l'email entré 
 // résultat fonction : $verif_mail
+    //$user = recupUtilisateur($_POST['mail'], $_POST['password'];
 
 if ( $verif_mail == 0){    //si la fonction renvoie 0 le mail est incorrect
 	echo "Email incorrect";
