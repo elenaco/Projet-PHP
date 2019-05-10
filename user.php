@@ -11,6 +11,9 @@ class user
     private $bio;
     private $date_inscription;
     private $admin;
+    private $hidden;
+
+
 
     /**
      * @return mixed
@@ -154,6 +157,22 @@ class user
     public function setAdmin($admin)
     {
         $this->admin = $admin;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHidden()
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * @param mixed $hidden
+     */
+    public function setHidden($hidden)
+    {
+        $this->hidden = $hidden;
     }
 
 

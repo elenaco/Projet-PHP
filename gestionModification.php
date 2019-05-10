@@ -12,4 +12,6 @@ $user->setDateNaissance($_POST['date_naissance']);
 
 //+ appel fonction BDD
 
+modifUser($user->getPseudo(), $user->getNom(), $user->getPrenom(), $user->getMail(), $user->getBio(), $user->getDateNaissance());
+
 echo $user->getPseudo();
