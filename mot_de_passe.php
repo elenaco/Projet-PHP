@@ -7,7 +7,7 @@
 	<?php
 	echo "<h1>Modification mot de passe  </h1>
 	<div class=\"form-popup\" id=\"formConnexion\">
-		<form action='GestionMotDePasse.php' method='POST'>
+		<form action='../Traitement/gestionMdp.php' method='POST'>
 		<div>
 			<label>Mot de passe:</label>
 			<input type='password' name='password'>

@@ -1,8 +1,11 @@
 <?php
-include('../Class/user.php');
+include('../Class/User.php');
+
+session_start();
 
 $user = new user;
 
+$user->setId($_SESSION['id']);
 $user->setPseudo($_POST['pseudo']);
 $user->setNom($_POST['nom']);
 $user->setPrenom($_POST['prenom']);
@@ -12,6 +15,6 @@ $user->setDateNaissance($_POST['date_naissance']);
 
 //+ appel fonction BDD
 
-modifUser($user->getPseudo(), $user->getNom(), $user->getPrenom(), $user->getMail(), $user->getBio(), $user->getDateNaissance());
+modifUser($user);
 
 echo $user->getPseudo();

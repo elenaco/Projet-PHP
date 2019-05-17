@@ -57,3 +57,10 @@ function verifInfoUtilisateur() {
     }
 
 }
+
+function verifChangementInfoUser(){
+    if(verifNom()!=true || verifPrenom()!=true){
+        verifNom();
+        verifPrenom();
+    }
+}

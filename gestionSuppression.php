@@ -1,8 +1,9 @@
 <?php
-include('../Class/user.php');
+include('../Class/User.php');
+include_once ('../database/request.php');
+
+session_start();
 
 $user = new user();
 
- $user->setHidden(0);
-
- deleteUser($user->getHidden());
+delUser($_SESSION['id']);

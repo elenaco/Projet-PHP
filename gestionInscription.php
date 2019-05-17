@@ -1,6 +1,7 @@
 <?php
 include('../Class/User.php');
 
+session_start();
  $user = new User;
 
  $user->setPseudo($_POST['pseudo']);
@@ -10,7 +11,10 @@ include('../Class/User.php');
  $user->setBio(" ");
  $user->setDateNaissance($_POST['date_naissance']);
  $user->setDateInscription(date("Y-m-d"));
- $user->setHidden(1);
+
 
  // appel fonction BDD
-   // createUser($user,$POST['password']);
+   $_SESSION['id'] = createUser($user,$_POST['password']);
+
+
+header('Location: index.php');

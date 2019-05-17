@@ -1,5 +1,5 @@
 <?php
-include('../Class/user.php');
+include('../Class/User.php');
 
 $user = new user;
 

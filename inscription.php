@@ -1,16 +1,16 @@
 <!doctype html>
 <html>
-	<head>
-		<title>Inscription</title>
-        <meta charset="utf-8">
-	</head>
-	<body>
+<head>
+    <title>Inscription</title>
+    <meta charset="utf-8">
+</head>
+<body>
 <?php
 echo "
 <h1> Inscription </h1>
  
 <div class=\"form-popup\" id=\"formInscription\">
-	<form action='gestionInscription.php' method='POST'>
+	<form action='../Traitement/gestionInscription.php' method='POST'>
 	
 		<div>
 			<label>Nom :</label>
@@ -48,7 +48,7 @@ echo "
 </div>";
 ?>
 
-<script type ="text/javascript" src="js/restrictionField.js"></script>
+<script type ="text/javascript" src="../../scripts/restrictionField.js"></script>
 
-    </body>
+</body>
 </html>
