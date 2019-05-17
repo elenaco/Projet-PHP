@@ -10,7 +10,7 @@ class User
     private $bio;
     private $date_inscription;
     private $admin;
-    private $hidden;
+    private $id;
 
 
 
@@ -146,17 +146,17 @@ class User
     /**
      * @return mixed
      */
-    public function getHidden()
+    public function getId()
     {
-        return $this->hidden;
+        return $this->id;
     }
 
     /**
      * @param mixed $hidden
      */
-    public function setHidden($hidden)
+    public function setId($id)
     {
-        $this->hidden = $hidden;
+        $this->id = $id;
     }
 
 
